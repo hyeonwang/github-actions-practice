@@ -20,3 +20,15 @@ jobs:
           else
             echo "README.md not found"
           fi
+
+      - name: Repeat commands
+        run: |
+          for i in 1 2 3
+          do
+            echo "Test $i"
+          done
+
+      - name: Use environment variable
+        env:
+          MESSAGE: Hello!!
+        run: echo "$MESSAGE"
