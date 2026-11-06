@@ -1,0 +1,22 @@
+
+name: Shell Command
+on: workflow_dispatch
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check environment
+        run: |
+          echo "Current directory:"
+          pwd
+          echo "File list:"
+          ls -la
+
+      - name: Check file
+        run: |
+          if [ -f "README.md" ]; then
+            echo "README.md exists"
+          else
+            echo "README.md not found"
+          fi
