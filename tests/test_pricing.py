@@ -1,11 +1,10 @@
-import os
 import pytest
 
 from orderlab.pricing import final_total, subtotal
 
 
 def test_subtotal_normal():
-    assert subtotal(10_000, 2) == 20_001
+    assert subtotal(10_000, 2) == 20_000
 
 
 @pytest.mark.parametrize(("price", "quantity"), [(0, 3), (10_000, 0)])
