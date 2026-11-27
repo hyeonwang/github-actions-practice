@@ -1,5 +1,3 @@
-
-
 name: JSON Functions Example
 on: workflow_dispatch
 env:
@@ -17,5 +15,9 @@ jobs:
 
           # toJSON() 함수
           RESULT_JSON: "${{ toJSON(fromJSON(env.STUDENT)) }}"
-4
-
+        run: |
+          echo "Name: $RESULT_NAME"
+          echo "Score: $RESULT_SCORE"
+          echo "Passed: $RESULT_PASSED"
+          echo "JSON:"
+          echo "$RESULT_JSON"
