@@ -4,6 +4,7 @@ name: Create Issue on Push
 
 on:
   push:
+    branches: [practice/push-issue]
 
 permissions:
   issues: write
